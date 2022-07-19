@@ -1,5 +1,5 @@
 # Signin
-A simple signin interface using VueJS
+A simple SignIN interface using VueJS
 ## Project setup
 ```
 npm install
