@@ -124,7 +124,7 @@ form.login input[type='submit'] {
 }
 .x {
   background-color: #724e91;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 .container {
   background-color: white;
