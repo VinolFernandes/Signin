@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="bg">
     <div id="nav" v-if="$store.state.user">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -49,4 +49,7 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+#bg{
+  background-color:#724e91;
+}  
 </style>
