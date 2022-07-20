@@ -37,7 +37,7 @@
                     <input 
                         type="submit"
                         value="Login"/>
-                    <p>Dont have an account?<a href="RegisterView.vue" style="color:#22162B; font-weight: bold;">Sign up instantly</a></p>
+                    <p>Dont have an account?<router-link to="/register" style="color:#22162B; font-weight: bold; text-decoration: none;">Sign up instantly</router-link></p>
                 </form>
             </div>
             
@@ -81,6 +81,8 @@ export default {
 	display: flex;
 	min-height: 100vh;
     margin: auto;
+    justify-content: center;
+    
     
     /* padding: 10px; */
 }
@@ -93,6 +95,8 @@ export default {
 form {
 	flex: 1 1 0%;
 	padding: 3rem 3rem 1rem;
+
+    
 }
 /* form.register {
 	color: #FFF;
@@ -169,12 +173,15 @@ form.login input[type="submit"] {
 } */
 .x{
     background-color: #724E91;
+    background-size: cover;
 }
 .container{
     background-color: white;
     padding:50px;
     margin:50px;
     margin-right:0;
+    border-top-left-radius:10px;
+    border-bottom-left-radius: 10px;
     
 }
 .helloworld{
@@ -182,13 +189,10 @@ form.login input[type="submit"] {
     padding:50px;
     margin:50px;
     margin-left:0;
-    background: url('../assets/images/abc.jpg');
+    background: url('../assets/images/back.jpg');
     /* background-size:; */
-    
+    width:fit-content;
+    background-repeat: no-repeat;
     flex: 1 1 10%;
-	
-
-    
-
 }
 </style>

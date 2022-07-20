@@ -1,13 +1,20 @@
 <template>
-  <main>
+  <main class="Y">
     <section class="forms">
+		<div class="registrationimg">
+           
+        </div>
+		<div class="container">
         <form class="register" @submit.prevent="register">
             <h2>Register</h2>
+			<p id="reg"> Register with your email and password.</p>
+            <p class="labels">Email:</p>
             <input 
                 type="email" 
                 placeholder="Enter your email"
                 v-model="register_form.email"
             />
+			<p class="labels">Password:</p>
             <input
                 type="password" 
                 placeholder="Enter your password"
@@ -16,7 +23,10 @@
             <input 
                 type="submit"
                 value="Register"/>
-        </form>
+				<p>Already have an account?<router-link to="/login" style="color:#22162B; font-weight: bold; text-decoration: none;">Login </router-link></p>
+			</form>
+		</div>
+		
         </section>
   </main>
 </template>
@@ -41,44 +51,56 @@ export default {
 </script>
 
 <style>
-       .forms {
+.Y{
+    background-color: #724E91;
+    background-size: cover;
+	
+}
+.forms {
 	display: flex;
 	min-height: 100vh;
+	justify-content: center;
+	
 }
 form {
 	flex: 1 1 0%;
-	padding: 8rem 1rem 1rem;
+	padding: 3rem 3rem 1rem;
+    
+}
+.labels{
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 form.register {
-	color: #FFF;
-	background-color: rgb(245, 66, 101);
-	background-image: linear-gradient(
-		to bottom right,
-		rgb(245, 66, 101) 0%,
-		rgb(189, 28, 60) 100%
-	);
+	color:black;
 }
 h2 {
 	font-size: 2rem;
-	text-transform: uppercase;
-	margin-bottom: 2rem;
+	text-align: left;
+    font-weight: bold;
+	margin-bottom: 1rem;
 }
 input {
-	appearance: none;
+	/* appearance: none;
 	border: none;
 	outline: none;
-	background: none;
+	background: none; */
 	display: block;
 	width: 100%;
 	max-width: 400px;
 	margin: 0 auto;
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 	margin-bottom: 2rem;
 	padding: 0.5rem 0rem;
+    border: 10px;
+    border-radius: 0.7rem;
+    /* background-color: #2c3e50; */
 }
 input:not([type="submit"]) {
 	opacity: 0.8;
 	transition: 0.4s;
+	
 }
 input:focus:not([type="submit"]) {
 	opacity: 1;
@@ -87,16 +109,41 @@ input::placeholder {
 	color: inherit;
 }
 form.register input:not([type="submit"]) {
-	color: #FFF;
-	border-bottom: 2px solid #FFF;
+	border: 2px solid ;
+    color:grey;
 }
 form.register input[type="submit"] {
-	background-color: #FFF;
-	color: rgb(245, 66, 101);
+	background-color: #22162B;
+	color:#E54F6D;
 	font-weight: 700;
 	padding: 1rem 2rem;
-	border-radius: 0.5rem;
+	border-radius: 2.0rem;
 	cursor: pointer;
 	text-transform: uppercase;
+}
+.container{
+    background-color: white;
+    padding:50px;
+    margin:50px;
+    margin-right:0;
+	/* border-top-right-radius:10px;
+    border-bottom-right-radius: 10px; */
+    
+}
+#reg{
+    text-align: left;
+    color:black;
+    margin-bottom:3rem;
+}
+.registrationimg{
+	background-color: #FFF;
+    padding:50px;
+    margin:50px;
+    margin-left:0;
+    background: url('../assets/images/registration.jpg');
+    /* background-size:; */
+    /* width:fit-content; */
+    background-repeat: no-repeat;
+    flex: 1 1 10%;
 }
 </style>
