@@ -32,4 +32,4 @@ npm run lint
 
 You can also preview the site on the below link
 <br/>
-[vinolfernandes.netlify.app](https://vinolfernandes.netlify.app/login)
+[vinolfernandes.netlify.app](https://vinolfernandes.netlify.app/login/)
