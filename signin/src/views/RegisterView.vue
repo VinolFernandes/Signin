@@ -1,9 +1,6 @@
 <template>
   <main class="Y">
     <section class="forms">
-		<div class="registrationimg">
-           
-        </div>
 		<div class="container">
         <form class="register" @submit.prevent="register">
             <h2>Register</h2>
@@ -26,7 +23,9 @@
 				<p>Already have an account?<router-link to="/login" style="color:#22162B; font-weight: bold; text-decoration: none;">Login </router-link></p>
 			</form>
 		</div>
-		
+		<div class="registrationimg">
+           
+        </div>
         </section>
   </main>
 </template>
@@ -82,10 +81,6 @@ h2 {
 	margin-bottom: 1rem;
 }
 input {
-	/* appearance: none;
-	border: none;
-	outline: none;
-	background: none; */
 	display: block;
 	width: 100%;
 	max-width: 400px;
@@ -95,7 +90,6 @@ input {
 	padding: 0.5rem 0rem;
     border: 10px;
     border-radius: 0.7rem;
-    /* background-color: #2c3e50; */
 }
 input:not([type="submit"]) {
 	opacity: 0.8;
@@ -125,10 +119,7 @@ form.register input[type="submit"] {
     background-color: white;
     padding:50px;
     margin:50px;
-    margin-right:0;
-	/* border-top-right-radius:10px;
-    border-bottom-right-radius: 10px; */
-    
+    margin-right:0;    
 }
 #reg{
     text-align: left;
@@ -140,10 +131,11 @@ form.register input[type="submit"] {
     padding:50px;
     margin:50px;
     margin-left:0;
+    width: 686px;
     background: url('../assets/images/registration.jpg');
-    /* background-size:; */
-    /* width:fit-content; */
+    background-size:100% 100%;
     background-repeat: no-repeat;
-    flex: 1 1 10%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 </style>
