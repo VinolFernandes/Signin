@@ -9,8 +9,10 @@
   </div>
 </template>
 <script>
+
 import { onBeforeMount } from 'vue';
 import { useStore } from 'vuex';
+
 
 export default {
   setup() {
@@ -20,6 +22,10 @@ export default {
       store.dispatch('fetchUser');
     });
   },
+  // mounted(){
+  //  axios.get('http://localhost:8080/api').
+  //  then(response => (this.info = response)) 
+  // }
 };
 </script>
 

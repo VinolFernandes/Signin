@@ -37,7 +37,10 @@
 <script>
 import { ref } from 'vue';
 import { useStore } from 'vuex';
+// import Vue from 'vue'
+// import axios from 'axios'
 
+// Vue.use(axios);
 export default {
   setup() {
     const login_form = ref({});
@@ -50,6 +53,12 @@ export default {
       login,
     };
   },
+  // mounted(){
+  //   Vue.axios.get('http://dummy.restapiexample.com/api/v1/employees').
+  //   then((res)=>{
+  //     console.log(res);
+  //   })
+  // }
 };
 </script>
 
@@ -59,6 +68,7 @@ export default {
   margin: auto;
   justify-content: center;
   overflow: auto;
+  box-shadow:inherit 10px;
 }
 .labels {
   text-align: left;
